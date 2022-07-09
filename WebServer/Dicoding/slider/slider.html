@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .content{
+            height: 400px;
+            width: 750px;
+            overflow: hidden;
+            position: relative;
+        }
+        .content .images{
+            height: 100%;
+            width: 100%;
+        }
+        .images img{
+            width: 100%;
+            height: 100%;
+        }
+        .btn-slider{
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+            display: flex;
+            transform: translateX(-50%);
+        }
+        .btn-slider span{
+            height: 15px;
+            width: 50px;
+            background: 2px solid white;
+            margin: 0 3px;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+        .btn-slider span:hover{
+            background:  white;
+        }
+        .content .slide{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            border: 2px solid white;
+            cursor: pointer;
+        } 
+        .slide span{
+            font-size: 35px;
+            color: white;
+            line-height: 41px;
+        }
+        .content .right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="images">
+            <img src="img/barista.jpg" alt="1">
+            <img src="img/content-writer.jpg" alt="2">
+            <img src="img/desinger.jpg" alt="3">
+            <img src="img/fotografer.jpg" alt="4">
+            <img src="img/tour-guide.jpg" alt="5">
+            <img src="img/web-developer.jpg" alt="6">
+        </div>
+        <div onclick="side_slide(-1)" class="slide left">
+            <span class="left"></span>
+        </div>
+        <div  onclick="side_slide(1)" class="slide right">
+            <span class="right"></span>
+        </div>
+        <div class="btn-slider">
+            <span onclick="btn_slider(1)">DEMO</span>
+            <span onclick="btn_slider(2)">DEMO</span>
+            <span onclick="btn_slider(3)">DEMO</span>
+            <span onclick="btn_slider(4)">DEMO</span>
+            <span onclick="btn_slider(5)">DEMO</span>
+            <span onclick="btn_slider(6)">DEMO</span>
+        </div>
+    </div>
+    <script>
+        const indexValue = 1;
+        showImg(indexValue);
+        function btn_slider(e){showImg(indexValue = e);}
+        function side_slide(e){showImg(indexValue += e);}
+        function showImg(e){
+
+            let i;
+            const img = document.querySelectorAll('img')
+            const slider = document.querySelectorAll('.btn-slider')
+            if(e > img.length){indexValue = 1}
+            if(e < 1){indexValue = img.length}
+            for(i = 0; i < img.length; i++){
+                img[i].style.display = 'none'
+            }
+            img[indexValue-1].style.display = 'block'
+        }
+        
+
+    </script>
+</body>
+</html>

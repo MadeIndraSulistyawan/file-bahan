@@ -1,0 +1,191 @@
+:root{
+    --primary-color: #0d6efd;
+    --secondary-color: #c4c7ca;
+    --bg-color: #e2edff;
+    --font-color: #f8f9fa;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 3000px;
+}
+
+
+/* top */
+nav{
+    display: flex;
+    background-color: var(--primary-color);
+    height: 50px;
+    width: 100%;
+    justify-content:space-between;
+    color: var(--font-color);
+    margin-top: -100px;
+}
+ul{
+    position: fixed;
+    margin-top: 100px;
+    display: flex;
+    padding: 5px 7px;
+
+}
+li{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+h1{
+    color: black;
+    margin-top: 100px;
+    margin: 7px 30px;
+    margin-right: 650px;
+    font-weight: 800;
+    font-size: 35px;
+}
+a{
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 2px 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: black;
+}
+a:hover{
+    background-color: gray;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    transform-origin: center;
+}
+
+/* Section Home */
+section#Home{
+    background-color: var(--secondary-color);
+    padding-bottom: 100px;
+    padding-top: 120px;
+}
+.container{
+    margin: 0 100px;
+    display: flex;
+    justify-content: center;
+
+}
+.container-home2{
+    margin: 0 150px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+img.profile{
+    margin-top: 80px;
+    border-radius: 50%;
+}
+h3{
+    font-size: 2rem;
+}
+.intro{
+    font-size: 1rem;
+}
+/* Akhir Section Home */
+
+
+/* Section About */
+#About{
+    padding: 100px;
+}
+h2{
+    text-align: center;
+    padding: 40px;
+}
+.lead{
+    box-sizing: border-box;
+    text-align: justify;
+    margin: 0 20px;
+    font-size: 15px;
+}
+/* Akhir section About */
+
+/* Project Section */
+#Project{
+    background-color: var(--secondary-color);
+    padding: 90px;
+    margin-top: -10px ;
+}
+img{
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+}
+.container-project{
+    display: flex;
+    justify-content: center;
+    margin: 0 100px;
+    box-sizing: border-box;
+}
+.img-box{
+    padding-bottom: 10px;
+    background-color: white;
+    margin: 10px 25px;
+    border-radius: 25px;
+}
+/*  Akhir Project Section */
+
+
+/* Contact Section */
+.container-contact{
+    margin: 0 100px;
+    text-align: center;
+}
+input{
+    width: 40%;
+    height: 30px;
+    margin-bottom: 20px ;
+}
+textarea{
+    width: 40%;
+    height: 2%;
+}
+label{
+    margin-left: -400px;
+}
+.kirim{
+    background-color: var(--primary-color);
+    outline: none;
+    border: var(--primary-color) 2px solid;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: -400px;
+    font-weight: 550;
+    color: white;
+    margin-bottom: 100px;
+}
+.kirim:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+/* Akhir Contact Section */
+
+/* footer */
+.foot{
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    margin-top: -10px;
+}
+
+
+@media(max-width: 758px) {
+    
+}

@@ -1,0 +1,292 @@
+:root{
+    --primary-color: #0d6efd;
+    --secondary-color: #c4c7ca;
+    --bg-color: #e2edff;
+    --font-color: #f8f9fa;
+}
+body, *{
+    padding: 0;
+    margin: 0;
+    /* untuk anchor supaya transisi smooth */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+}
+
+
+/* section nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+}
+h1{
+    /* position: fixed; */
+    font-size: 3.5vw;
+    padding: 10px 10px;
+    left: 10px;
+}
+ul{
+    display: flex;
+    padding-top: 20px;
+    list-style-type: none;
+    justify-content: center;
+}
+ul li a{
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    color: black;
+}
+/* akhir section nav */
+/* section hamburger */
+
+
+#hamburger{
+    display: none;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 12px;
+}
+.bar{
+    display: block;
+    width: 38px;
+    height: 5px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: black;
+}
+
+
+
+/*  akhir section hamburger */
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* section Home */
+#home{
+    background-color: var(--primary-color);
+    padding: 7px;
+    margin-bottom: -2px;
+}
+.house{
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#home .house img{
+    margin: 15px auto;
+    min-width: 200px;
+    border-radius: 50%;
+}
+#home .house h3{
+    margin: 2.5vh ;
+}
+/* akhir section home */
+
+/* section about */
+
+#about h2{
+    text-align: center;
+    font-size: 3.5vh;
+    padding-top: 50px;
+}
+.bout{
+    display: flex;
+    padding-bottom: 20px;
+}
+.bout .lead{
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: justify;
+    margin: 20px;
+    font-size: 2vh;
+}
+/* flexbox tanpa flex */
+
+
+
+/* akhir section about */
+/* section project */
+#project{
+    background-color: var(--primary-color);
+    margin-top: -10px;
+    margin-bottom: -2px;
+}
+.roject{
+    margin-top: 20px;
+    display: flex;
+}
+#project h2{
+    text-align: center;
+    font-size: 4vh;
+}
+.contain{
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+.roject img{
+    max-width: 300px;
+    border-radius: 15px;
+}
+#project .roject .contain p{
+    text-align: center;
+
+}
+/* section project */
+/* section Contact */
+#contact .kontek{
+    display: flex;
+    flex-direction: column;
+    
+}
+#contact .kontek h2{
+    margin-left: 225px;
+}
+#contact .kontek label{
+    margin-left: 225px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+#contact .kontek input{
+    width: 55%;
+    margin: 0 auto;
+    height: 30px;
+}
+#contact .kontek textarea{
+    width: 55%;
+    margin: 0 auto;
+}
+#contact .kontek .button{
+    width: 50px;
+    margin: 15px 40px;
+    margin-left: 225px;
+}
+/* akhir section Contact */
+/* footer */
+footer{
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin-top: -10px;
+}
+footer .container p{
+    text-align: center;
+}
+/* akhir footer */
+
+
+/* mobile responsive */
+@media (max-width: 768px) {
+    
+    /* section Nav */
+    nav{
+        max-height: 90px;
+        position: static;
+
+    }
+    h1{
+        font-size: 5vh;
+    }
+    /* ul{
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        transition: 0.5s ease-in-out;
+        transform: 1s ease-in-out ;
+    } 
+    ul.active {
+        display: none; */
+    
+    #sidebar{
+        display: none;
+    }
+    #sidebar.active{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        transition: 0.5s ease-in-out;
+        transform: 1s ease-in-out ;
+    }
+    ul li{
+        margin: 20px auto;
+    }
+    ul li:first-child{
+        margin-top: -400px;
+        top: 20px;
+    }
+
+    /* section Nav */
+    /* section hamburger */
+    #hamburger{
+        display: block;
+        position: relative;
+    }
+    /* transisi hamburger */
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* section hamburger */
+    /* section Home */
+    .container{
+        max-width: 300px;
+    }
+    /* section Home */
+    /* section about */
+    .bout{
+        flex-direction: column;
+    }
+    .bout .lead{
+        text-align: center;
+    }
+    /* section about */
+    /* section project */
+    .roject{
+        flex-direction: column;
+    }
+    /* section project */
+    /* section contact */
+ 
+   #contact .kontek h2{
+    margin-left: 75px;
+    }
+    #contact .kontek label{
+        margin-left: 75px;
+    }
+    #contact .kontek input{
+        height: 20px;
+    }
+    #contact .kontek .button{
+        margin-left: 75px;
+    }
+    
+    /* section contact */
+}

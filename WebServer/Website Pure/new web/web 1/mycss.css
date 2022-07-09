@@ -1,0 +1,263 @@
+:root{
+    --primary-color: #0d6efd;
+    --secondary-color: #c4c7ca;
+    --bg-color: #e2edff;
+    --font-color: #f8f9fa;
+}
+
+html,*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bg-color);
+    /* overflow-x: hidden; */
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+}
+/* section nav */
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+}
+h1{
+    /* position: fixed; */
+    font-size: 3vw;
+    padding: 10px 10px;
+    left: 10px;
+} 
+ul{
+    /* position: fixed; */
+    right: 10px;
+    display: flex;
+    padding-top: 20px;
+    list-style-type: none;
+    justify-content: center;
+}
+ul li a{
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    color: black;
+}
+
+/* section hamburger */
+.hamburger{
+    cursor: pointer;
+    position: absolute;
+    background-color: black;
+    z-index: 99;
+}
+.bar{
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+/* transisi hamburger */
+
+/* section hamburger */
+/* Section Nav */
+
+#home, #about, #project, #contact{
+    padding-top: 90px;
+    margin-top: -70px;
+}
+
+
+/* section Home */
+#home{
+    background-color: var(--primary-color);
+    padding: 7px;
+    margin-bottom: -2px;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.house{
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#home .house img{
+    margin: 15px auto;
+    max-width: 200px;
+    border-radius: 50%;
+}
+#home .house h3{
+    margin: 3px ;
+}
+
+/* section Home */
+/* section about */
+#about h2{
+    text-align: center;
+    font-size: 4vh;
+    padding-top: 50px;
+}
+.bout{
+    display: flex;
+    padding-bottom: 20px;
+}
+.bout .lead{
+    box-sizing: border-box;
+    text-align: justify;
+    margin: 20px;
+    font-size: 2.5vh;
+}
+/* section about */
+/* section project */
+#project{
+    background-color: var(--primary-color);
+    margin-top: -10px;
+    margin-bottom: -2px;
+}
+.roject{
+    margin-top: 20px;
+    display: flex;
+}
+#project h2{
+    text-align: center;
+    font-size: 4vh;
+}
+.contain{
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+.roject img{
+    max-width: 300px;
+    border-radius: 15px;
+}
+#project .roject .contain p{
+    text-align: center;
+
+}
+/* section project */
+/* section Contact */
+#contact .kontek{
+    display: flex;
+    flex-direction: column;
+    
+}
+#contact .kontek h2{
+    margin-left: 225px;
+}
+#contact .kontek label{
+    margin-left: 225px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+#contact .kontek input{
+    width: 55%;
+    margin: 0 auto;
+    height: 30px;
+}
+#contact .kontek textarea{
+    width: 55%;
+    margin: 0 auto;
+}
+#contact .kontek .button{
+    width: 50px;
+    margin: 15px 40px;
+    margin-left: 225px;
+}
+/* section Contact */
+/* footer */
+footer{
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin-top: -10px;
+}
+footer .container p{
+    text-align: center;
+}
+/* footer */
+
+@media (max-width: 768px) {
+    
+    /* section Nav */
+    nav{
+        position: sticky;
+        max-height: 90px;
+        /* background: rgba(0, 0, 0, 0.5) ; */
+    }
+    h1{
+        font-size: 5vh;
+    }
+    ul{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: red;
+        right: 0;
+
+    }
+
+    /* section Nav */
+    /* section hamburger */
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    /* section hamburger */
+    /* section Home */
+    .container{
+        max-width: 300px;
+    }
+    /* section Home */
+    /* section about */
+    .bout{
+        flex-direction: column;
+    }
+    .bout .lead{
+        text-align: center;
+    }
+    /* section about */
+    /* section project */
+    .roject{
+        flex-direction: column;
+    }
+    /* section project */
+    /* section contact */
+ 
+   #contact .kontek h2{
+    margin-left: 75px;
+    }
+    #contact .kontek label{
+        margin-left: 75px;
+    }
+    #contact .kontek input{
+        height: 20px;
+    }
+    #contact .kontek .button{
+        margin-left: 75px;
+    }
+    
+    /* section contact */
+}

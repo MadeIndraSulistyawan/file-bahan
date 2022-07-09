@@ -1,0 +1,4 @@
+cara mengupdate commit ke github
+git add . (untuk menambahkan semua file yang ada pada folder tersebut)
+git commit -m "(pesan commit)" untuk menambahkan pesan ke commit
+git push -u (untuk mengepush file ke github)

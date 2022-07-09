@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+.flex-container-column{
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;   
+}
+.flex-container-row{
+    display: flex;
+}
+.display{
+    background-color: #333333;
+    color: white;
+    font-size: 3rem;
+    text-align: right;
+    padding: 10px 20px;
+}
+.button{
+    padding: 40px;
+    text-align: center;
+    background-color: #d2d2d2;
+    flex-basis: 25%;
+    border: 1px black solid;
+    cursor: pointer;
+}
+.negative, .operator,.equals{
+    background-color: orange;
+} 
+.equals{
+    flex-grow: 2;
+}
+
+.button:hover{
+    font-weight: bold;
+}
+
+.history {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    overflow: scroll;
+ }
+ table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+ }
+ th,
+td {
+   text-align: center;
+   padding: 16px;
+}
+th {
+    background-color: orange;
+    color: white;
+ }
+  
+ tr:nth-child(even) {
+    background-color: #d2d2d2;
+ }
+@media screen and (max-width:510px){
+    .button{
+        padding: 10px;
+    }
+    .history {
+        width: 100%;
+    }
+}
