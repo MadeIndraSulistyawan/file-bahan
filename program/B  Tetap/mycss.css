@@ -1,0 +1,104 @@
+:root{
+    --body-color: #E4E9F7;
+
+    --tran-02: all 0,2s ease;
+}
+/*bagian top*/
+a{text-decoration: none; font-size: 20px;font-family: sans-serif;padding: 1px 10px}
+
+li {display: inline;}
+li a{ color: #8981ff; padding-top: 3px;}
+li :hover{color: #ffffff; transform: perspective();}
+.atas:hover{
+    color: #8354e7;
+    transform: perspective();}
+.atas{  background-color: #30048f;
+        padding: 5px;
+        height: 50px;
+}
+/*bagian body web*/
+.badan{padding-left: 200px; padding-right: 200px; padding-top: 50px;}
+.badi{padding-left: 250px; padding-right: 250px;}
+.Paragraf{font-size: 2vw;}
+h1{font-size: 4vw;}
+.gambar{
+    padding-left: 90px; 
+    padding-right: 250px;
+    padding-top: 50px;
+    margin-bottom: 15%;
+}
+img{
+    padding-left: 90px; 
+    padding-right: 250px;
+    padding-top: 50px;
+}
+.data{
+    padding-left: 500px;
+    padding-top: 50px;
+}
+.diri{
+    padding-top: 85px;
+    margin-top: 20px;
+}
+.coba{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.password{
+    padding-left: 100px;
+    padding-top: 55px;
+}
+
+
+/*Form Login html*/
+.kotakaja{
+	width: 350px;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+}
+.login_form{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 30px;
+    outline: none;
+}
+.pass_form{
+    box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 1px;
+}
+ 
+.button_login{
+	background: #0493bd;
+	color: white;
+	font-size: 11pt;
+	width: 80px;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+    margin: 20px;
+    align-items: center;
+    margin-left: 270px;
+    margin-top: 15px;
+    display: inline-block;
+}
+#body_login{
+    background:     #d5f0f3;;
+}
+.headeng{
+    text-align: center;
+}
+.login{
+    padding-left: 100px;
+    padding-top: 50px;
+}

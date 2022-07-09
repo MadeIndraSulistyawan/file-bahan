@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="cssstyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <style>
+        .burger{
+            display: block;
+            cursor: pointer;
+        }
+        .bare{
+          display: block;
+          background-color: black;
+          width: 110px;
+          height: 20px;
+          margin: 13px auto; 
+          transition: all 0.5s ease-in-out ; 
+        }
+        .burger.active .bare:nth-child(2){
+            opacity: 0;
+        }
+        .burger.active .bare:nth-child(1){
+            transform: translateY(32px) rotate(45deg);
+        }
+        .burger.active .bare:nth-child(3){
+            transform: translateY(-32px) rotate(-45deg);
+        }
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           <h1>Project</h1>
+        </div>
+        <ul class="nav-atas">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Bio.html">Bio</a></li>
+        </ul> 
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="gambar-project">
+        <div class="img-project">
+            <img src="bahan/jadwal.png" alt="jadwal" >
+        </div>
+        <div class="img-project">
+            <img src="bahan/slider.jpg" alt="testing">
+        </div>
+    </div>
+
+
+    <div class="burger">
+        <span class="bare"></span>
+        <span class="bare"></span>
+        <span class="bare"></span>
+    </div>
+    <script>
+
+        // hamburger menu
+        const burger = document.querySelector('.burger')
+        burger.addEventListener('click', () =>{
+            burger.classList.toggle('active')
+        })
+        // end
+
+
+        
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
